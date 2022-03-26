@@ -26,6 +26,8 @@ const [pagelength, setPageLength] = useState(0)
 useEffect( () => {
 
   getUsers(page).then(result => { 
+ 
+  
     setPageLimit(result.limit);
     setTotalUser(result.total);
     setPageNum(result.page);
@@ -50,7 +52,16 @@ useEffect( () => {
            more: false
       }
     })
-    
+// indexing that array incase a row is to be selected. we dont have to loop through the array again
+    let items=[];
+    items =newData
+       var mapItem= new Object;
+       items.forEach(element => {
+         mapItem[element.id]=element
+       });
+// indexing that array
+
+  
     setUsers(newData)})
 
 }, [page])

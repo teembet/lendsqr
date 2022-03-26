@@ -9,7 +9,7 @@ import TableMore from "./TableMore";
 
 
 function UserTable(props) {
-
+console.log(props.users,"users")
     const [filterStatus, setFilterStatus] = useState(false);
  
 
@@ -40,7 +40,7 @@ function UserTable(props) {
             (item, index) => {
                 return (
 
-                  <tr key={item.id}>
+                  <tr key={index}>
     <td>{item.organisation}</td>
     <td>{item.firstName}</td>
     <td>{item.firstName + "@gmail.com"}</td>
@@ -73,7 +73,7 @@ function UserTable(props) {
         props.users.map(
             (item, index) => {
                 return (
-      <div key={item.id} className="app-card mobile-table">
+      <div key={index} className="app-card mobile-table">
         <div className="div-block-14">
           <div className="text-block-7">.</div><img src={filterIcon} loading="lazy" alt="" className="image-5"/>
         </div>

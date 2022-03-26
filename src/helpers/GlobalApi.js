@@ -1,6 +1,6 @@
 import axios from "axios";
 
-
+//api returns only 100 records
 
 export async function getUsers(page) {
  
