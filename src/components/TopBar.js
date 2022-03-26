@@ -40,7 +40,7 @@ function TopBar() {
 {
 mobileMenu ?
 <div className="menu-modal">
-    <div onClick={() => { setMobileMenu(false)}} className="close-btn w-inline-block">
+    <div onClick={() => { setMobileMenu(false)}} className="close-btn w-inline-block" >
       <div>CLOSE MENU</div>
     </div>
     <div className="div-block-15">
