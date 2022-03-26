@@ -1,0 +1,27 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: relative;
+  }
+  
+  th {
+  
+    text-align: left;
+    padding: 20px 8px;
+  }
+
+  td {
+ 
+    text-align: left;
+    padding: 20px 8px;
+    border-bottom: 1px solid #21407d10;
+  }
+
+  tr {
+      position: relative;
+  }
+  
+  .table-div{
+      position: relative;
+  }

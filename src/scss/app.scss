@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "./pages/dashboard.scss";
+@import "./pages/login.scss";
+@import "./pages/userdetails.scss";
+
+
+@import "./components/sidebar.scss";
+@import "./components/topbar.scss";
+@import "./components/table.scss";
+
+@import "./layout/dashboard.scss";
+@import "./layout/form.scss";
+
+
+
+@font-face {
+    font-family: 'Sf compact text';
+    src: url('../assets/fonts/SF-Compact-Text-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenirnextltpro';
+    src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenirnextltpro';
+    src: url('../assets/fonts/Avenir-Next-Font.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenirnextltpro it';
+    src: url('../assets/fonts/AvenirNextLTPro-It.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
