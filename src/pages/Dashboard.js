@@ -59,6 +59,8 @@ useEffect( () => {
        items.forEach(element => {
          mapItem[element.id]=element
        });
+
+       localStorage.setItem("user",JSON.stringify(mapItem))
 // indexing that array
 
   
