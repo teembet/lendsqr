@@ -63,7 +63,7 @@ console.log(props.users,"users")
   </tbody>
 </table>
 {
-    filterStatus ? <TableFilter/> : null
+    filterStatus ? <TableFilter filterStatus={filterStatus}/> : null
 }
 
 </div>
@@ -73,9 +73,16 @@ console.log(props.users,"users")
         props.users.map(
             (item, index) => {
                 return (
+                  
       <div key={index} className="app-card mobile-table">
+       
+    
         <div className="div-block-14">
-          <div className="text-block-7">.</div><img src={filterIcon} loading="lazy" alt="" className="image-5"/>
+          <div className="text-block-7 "><img style={{cursor:"pointer"}} onClick={() => {props.toogleMore(index)}} src={moreIcon} loading="lazy" alt=""/>
+          { item.more ? <TableMore id = {item.id}/> : null }
+          </div>
+          <img src={filterIcon} loading="lazy" alt="" className="image-5"/>
+
         </div>
         <div className="div-block-14">
           <div className="text-block-7">ORGANIZATION</div>
@@ -105,6 +112,7 @@ console.log(props.users,"users")
      item.status == 3 ? <div className="status-chip active">Active</div> : null
     }
         </div>
+     
       </div>
                       )
                     }

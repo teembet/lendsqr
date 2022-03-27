@@ -62,7 +62,9 @@ useEffect( () => {
 // indexing that array
 
   
-    setUsers(newData)})
+    setUsers(newData)},error=>{
+      console.log(error)
+    })
 
 }, [page])
 
