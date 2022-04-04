@@ -63,7 +63,7 @@ console.log(props.users,"users")
   </tbody>
 </table>
 {
-    filterStatus ? <TableFilter filterStatus={filterStatus}/> : null
+    filterStatus ? <TableFilter toggleFilter={toggleFilter}/> : null
 }
 
 </div>

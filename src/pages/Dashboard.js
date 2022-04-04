@@ -9,11 +9,12 @@ import userSavingsIcon from "../assets/images/icon-3.png";
 
 import UserTable from "../components/UserTable";
 import { getUsers } from "../helpers/GlobalApi"
+import { useNavigate } from "react-router-dom";
 
 
 function Dashboard() {
 
-
+let navigate=useNavigate()
 const [ users, setUsers] = useState([]);
 const [page, setPage] = useState(1)
 const [pageLimit, setPageLimit] = useState(0)
@@ -26,13 +27,12 @@ const [pagelength, setPageLength] = useState(0)
 useEffect( () => {
 
   getUsers(page).then(result => { 
- 
-  
     setPageLimit(result.limit);
     setTotalUser(result.total);
     setPageNum(result.page);
     var sub = result.total/result.limit;
     setPageLength(Math.round(sub))
+    
     var orgArray = [
       "Apple",
       "Wells",
@@ -55,7 +55,7 @@ useEffect( () => {
 // indexing that array incase a row is to be selected. we dont have to loop through the array again
     let items=[];
     items =newData
-       var mapItem= new Object;
+       var mapItem= {}
        items.forEach(element => {
          mapItem[element.id]=element
        });
@@ -64,9 +64,11 @@ useEffect( () => {
 // indexing that array
 
   
-    setUsers(newData)},error=>{
-      console.log(error)
-    })
+    setUsers(newData)}
+   ).catch(error=>{
+     console.log(error,"error")
+    //  if(error) return navigate("/",{replace:true} )
+   })
 
 }, [page])
 

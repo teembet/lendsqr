@@ -2,10 +2,10 @@
 import dateIcon from "../assets/images/np_calendar_2080577_000000-1.svg"
 function TableFilter(props) {
 
-const filter=()=>{
+// const filter=()=>{
 
-props.filterStatus=false
-}
+// props.filterStatus=false
+// }
   return (
       <>
 
@@ -47,7 +47,7 @@ props.filterStatus=false
           </div>
           <div className="action-btn w-container">
             <div  className="filter-btn">Reset</div>
-            <div  className="filter-btn filter" onClick={filter}>Filter</div>
+            <div  className="filter-btn filter" onClick={props.toggleFilter}>Filter</div>
           </div>
         </div>
 
